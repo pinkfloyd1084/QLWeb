@@ -18,7 +18,7 @@
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px; /* Widened to accommodate 6 buttons in one row */
             padding: 40px 20px;
             width: 100%;
             box-sizing: border-box;
@@ -44,7 +44,7 @@
         }
 
         .navbar a {
-            flex: 0 1 calc(33% - 15px); /* Forces about 3 items per row if needed */
+            flex: 0 1 calc(16.66% - 15px); /* Forces all 6 items onto one row on desktop */
             max-width: 140px; /* Keeps them sized like navigation buttons */
             display: block;
             text-decoration: none;
@@ -116,8 +116,8 @@
             color: #333;
         }
 
-        /* Mobile adjustment for stacked blocks */
-        @media (max-width: 600px) {
+        /* Mobile adjustments for stacked blocks & nav */
+        @media (max-width: 768px) {
             .info-block {
                 flex-direction: column;
                 align-items: center;
@@ -130,6 +130,12 @@
             .info-content {
                 text-align: center;
             }
+            .navbar a {
+                flex: 0 1 calc(33.33% - 15px); /* 3 per row on tablets */
+            }
+        }
+        
+        @media (max-width: 480px) {
             .navbar a {
                 flex: 0 1 calc(50% - 15px); /* 2 per row on small phones */
             }

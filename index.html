@@ -14,7 +14,99 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quill & Lantern Tutoring - Coming Soon</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #1a432b; /* Dark green to match the brand */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+        
+        .container {
+            max-width: 900px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* New horizontal navigation bar layout for the buttons */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px; /* Space between the button bar and the text */
+            width: 100%;
+        }
+
+        .navbar a {
+            flex: 0 1 calc(25% - 15px); /* Forces about 4 items per row on desktop */
+            min-width: 120px; /* Prevents them from getting too tiny on mobile */
+            max-width: 160px; /* Keeps them sized like navigation buttons */
+            display: block;
+            text-decoration: none;
+        }
+
+        .navbar img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .navbar img:hover {
+            transform: scale(1.05); /* Slight pop effect when hovered */
+        }
+
+        .intro-text {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            color: #2c593f;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="qllogo.png" alt="Quill & Lantern Tutoring Logo" class="logo">
+
+        <div class="navbar">
+            <a href="#"><img src="home.png" alt="Home"></a>
+            <a href="#"><img src="ourapproch.png" alt="Our Approach"></a>
+            <a href="#"><img src="bservices.png" alt="Services"></a>
+            <a href="#"><img src="scheduling.png" alt="Scheduling"></a>
+            <a href="#"><img src="pricing.png" alt="Pricing"></a>
+            <a href="#"><img src="parent.png" alt="Parent Resources"></a>
+            <a href="#"><img src="content.png" alt="Content"></a>
+            <a href="#"><img src="faq.png" alt="FAQ"></a>
+        </div>
+
+        <p class="intro-text">
+            Welcome to Quill & Lantern Tutoring! Founded by Kayla Lambert, we provide compassionate, personalized, and engaging tutoring services tailored specifically for children with special needs. We believe every child's educational journey is unique, and we are dedicated to illuminating their path to success. Our full website is currently under construction, but we can't wait to learn with you soon!
+        </p>
+
+    </div>
+
+</body>
+</html>
         
         .container {
             max-width: 900px;

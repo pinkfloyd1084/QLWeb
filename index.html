@@ -5,22 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quill & Lantern Tutoring - Coming Soon</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
-            color: #1a432b; /* Dark green to match the brand */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quill & Lantern Tutoring - Coming Soon</title>
-    <style>
+        /* Base styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #ffffff;
@@ -35,29 +20,32 @@
         .container {
             max-width: 900px;
             padding: 40px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
             text-align: center;
+            margin-bottom: 30px;
         }
 
         .logo {
             max-width: 100%;
             height: auto;
-            margin-bottom: 20px;
         }
 
-        /* New horizontal navigation bar layout for the buttons */
+        /* Top Navigation Bar */
         .navbar {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 40px; /* Space between the button bar and the text */
-            width: 100%;
+            margin-bottom: 40px;
         }
 
         .navbar a {
-            flex: 0 1 calc(25% - 15px); /* Forces about 4 items per row on desktop */
-            min-width: 120px; /* Prevents them from getting too tiny on mobile */
-            max-width: 160px; /* Keeps them sized like navigation buttons */
+            flex: 0 1 calc(33% - 15px); /* Forces about 3 items per row if needed */
+            max-width: 140px; /* Keeps them sized like navigation buttons */
             display: block;
             text-decoration: none;
         }
@@ -74,91 +62,156 @@
             transform: scale(1.05); /* Slight pop effect when hovered */
         }
 
+        /* Intro Text */
         .intro-text {
             font-size: 1.25rem;
             line-height: 1.6;
             margin-bottom: 50px;
             color: #2c593f;
-            padding: 0 20px;
+            text-align: center;
+        }
+
+        /* Stacked Information Blocks */
+        .info-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .info-block {
+            display: flex;
+            flex-direction: row; /* Image on left, text on right */
+            align-items: flex-start;
+            background-color: #f9fdfa; /* Very faint green tint */
+            border: 1px solid #e0e8e3;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .info-block img {
+            width: 160px; /* Sized for the top-left corner */
+            height: auto;
+            margin-right: 25px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex-shrink: 0; /* Prevents the image from shrinking */
+        }
+
+        .info-content {
+            text-align: left;
+        }
+
+        .info-content h3 {
+            margin-top: 0;
+            color: #1a432b;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .info-content p {
+            margin: 0;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Mobile adjustment for stacked blocks */
+        @media (max-width: 600px) {
+            .info-block {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .info-block img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .info-content {
+                text-align: center;
+            }
+            .navbar a {
+                flex: 0 1 calc(50% - 15px); /* 2 per row on small phones */
+            }
+        }
+
+        /* Footer Home Link */
+        .footer-home {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-home img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .footer-home img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="qllogo.png" alt="Quill & Lantern Tutoring Logo" class="logo">
+        <div class="logo-container">
+            <img src="qllogo.png" alt="Quill & Lantern Tutoring Logo" class="logo">
+        </div>
 
         <div class="navbar">
-            <a href="#"><img src="home.png" alt="Home"></a>
-            <a href="#"><img src="ourapproch.png" alt="Our Approach"></a>
-            <a href="#"><img src="bservices.png" alt="Services"></a>
-            <a href="#"><img src="scheduling.png" alt="Scheduling"></a>
-            <a href="#"><img src="pricing.png" alt="Pricing"></a>
-            <a href="#"><img src="parent.png" alt="Parent Resources"></a>
-            <a href="#"><img src="content.png" alt="Content"></a>
+            <a href="#"><img src="about.png" alt="About"></a>
             <a href="#"><img src="faq.png" alt="FAQ"></a>
+            <a href="#"><img src="pricing.png" alt="Pricing"></a>
+            <a href="#"><img src="scheduling.png" alt="Scheduling"></a>
+            <a href="#"><img src="services.png" alt="Services"></a>
+            <a href="#"><img src="testimonials.png" alt="Testimonials"></a>
         </div>
 
         <p class="intro-text">
             Welcome to Quill & Lantern Tutoring! Founded by Kayla Lambert, we provide compassionate, personalized, and engaging tutoring services tailored specifically for children with special needs. We believe every child's educational journey is unique, and we are dedicated to illuminating their path to success. Our full website is currently under construction, but we can't wait to learn with you soon!
         </p>
 
+        <div class="info-stack">
+            <div class="info-block">
+                <img src="ourapproch.png" alt="Our Approach">
+                <div class="info-content">
+                    <h3>Individualized Learning Plans</h3>
+                    <p>We understand that every child learns differently. Our approach focuses on individualized strategies that adapt to your child's unique needs, combining evidence-based practices with a nurturing environment to foster genuine growth and confidence.</p>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <img src="bservices.png" alt="Services">
+                <div class="info-content">
+                    <h3>Comprehensive Support</h3>
+                    <p>From foundational academic subjects to specialized skill-building, our services are designed to support children with diverse learning profiles. We provide structured, engaging sessions that make learning accessible and enjoyable.</p>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <img src="parent.png" alt="Parent Resources">
+                <div class="info-content">
+                    <h3>Empowering Families</h3>
+                    <p>Collaboration is key to student success. We equip parents with tools, progress updates, and strategies to reinforce learning at home, ensuring that your child's educational journey is supported both in and out of our sessions.</p>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <img src="book.png" alt="Book Now">
+                <div class="info-content">
+                    <h3>Start Your Journey</h3>
+                    <p>Ready to illuminate your child's potential? We make the enrollment process seamless and transparent. Contact us today to discuss your child's specific needs and learn how Quill & Lantern Tutoring can make a difference.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-home">
+            <a href="index.html"><img src="home.png" alt="Home"></a>
+        </div>
     </div>
 
 </body>
 </html>
-        
-        .container {
-            max-width: 900px;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .logo {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 30px;
-        }
-
-        .intro-text {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            margin-bottom: 50px;
-            color: #2c593f;
-            padding: 0 20px;
-        }
-
-        /* Responsive grid for the buttons */
-        .button-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            justify-items: center;
-            align-items: center;
-        }
-
-        .button-grid a {
-            display: block;
-            text-decoration: none;
-        }
-
-        .button-grid img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .button-grid img:hover {
-            transform: scale(1.05); /* Slight pop effect when hovered */
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <img src="qllogo.png" alt="Quill & Lantern Tutoring Logo" class="logo">
-
-        <p class="intro-text">
-            Welcome to Quill & Lantern Tutoring! Founded by Kayla Lambert, we provide compassionate, personalized, and engaging tutoring services tailored specifically for children with special needs. We believe every child
